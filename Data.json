@@ -1,0 +1,85 @@
+{
+    "data" :
+    [
+        {
+            "tags" : "SaluttationSimple",
+            "questions" : ["Salut", "Bonjour", "Y'a-t-il quelqu'un?", "Hey", "Hola", "Hi", "Coucou"],
+            "responses" : ["Bonjour!", "Salut. Comment ça va?", "Salut", "Comment vous allez?", "ça va?", "Bonjour, comment puis-je vous aider?", "Salut, que puis-je faire pour vous ?"]
+        },
+        {
+            "tags" : "SalutationQuestion",
+            "questions" : ["ça va?", "Comment tu-vas ?", "Bien et toi ?"],
+            "responses" : ["Bien, comment puis-je vous aider?", "Bien merci, comment puis-je vous aider?", "Je vais bien merci, comment puis-je vous aider?", "Bien, que puis-je faire pour vous"]
+        },
+        {
+            "tags":"AuRevoir",
+            "questions": ["Bye.", "À plus tard", "Au revoir", "À la prochaine fois", "Au revoir", "Bonne journée", "À plus", "À plus tard"],
+            "responses": ["A bientôt !", "Ok, au revoir", "Passez une bonne journée.", "Au revoir! Revenez bientôt.", "Hou la la! Ce fut une viste rapide", "À plus tard"]
+        },
+        {
+            "tags" : "MotSimple",
+            "questions" : ["Bien", "Ok", "D'accord"],
+            "responses" : ["Ok", "Bien", "D'accord"]
+        },
+        {
+            "tags":"NoAnswer",
+            "questions": [""],
+            "responses": ["Désolé, je ne vous comprends pas. Revenez bientôt!", "Je ne suis pas sûr de vous comprendre, revenez plus tard."]
+        },
+        {
+            "tags" : "Remerciement",
+            "questions": ["Merci", "C'est utile", "Génial, merci", "Merci de m'aider"],
+            "responses": ["Heureux d'aider!", "C'est gratuit!", "Mon plaisir!", "De rien.", "Pas de quoi.", "Pas de problème.", "Je suis heureux que vous ayez aimé.", "Tout le plaisir est pour moi."]
+        },
+        {
+            "tags":"Options",
+            "questions": ["Comment pouvez-vous m'aider?", "Que pouvez-vous faire ?","Quelle aide apportez vous?", "Comment pouvez-vous être utile?", "Tu fais quoi?", "Tu sais faire quoi?", "Comment tu peux m'aider ?"],
+            "responses": ["Je peux vous guider sur certaine réponse de la FST, comme connaitre les conditions d'incription, comment s'inscrire à la FST, la date des examens, le nombre d'UE pour passer en classe supérieur ou redoubler et bien d'autres ...", "Je peux donner une liste des filières de la FST, le nombre de départements de la FST, et beaucoup d'autres ..."]
+        },
+        {
+            "tags" : "DateExamens",
+            "questions" : ["La date des examens ?", "C'est quand les examens ?", "Quelle est la date des examens"],
+            "responses" : ["07-Septembre-2020 pour les semestres impairs et 05-Avril-2021 pour les semestres pairs"]
+        },
+        {
+            "tags":"NombreUEPourAvoirLicence",
+            "questions":["Combien de dettes pour avoir sa licence ?", "Comment avoir une licence ?", "Combien de dettes pour avoir sa licence ?"],
+            "responses":["Il faut valider toutes les UE.", "Pour avoir sa licence, vous devez valider toutes les UE."]
+        },
+        {
+            "tags":"Myself",
+            "questions":["Comment t'appelles-tu ?", "Comment tu t'appelles ?", "C'est quoi ton nom ?", "Ton nom ?","Qui est tu ?", "Qui êtes vous ?", "Qui vous êtes ?"],
+            "responses":["Je m'appelle RoCo, un robot conversationnel conçu pour répondre aux questions relatives a la FST.", "Je suis RoCo, un systeme intelligent pour repondre aux differentes questions sur la FST."]
+        },
+        {
+            "tags":"PremiereFiliereFST",
+            "questions":["Les prémières filières de la FST?", "Quelles sont les prémières filières de la fst?"],
+            "responses":["Ils sont :\nMaths\nInformatique\nPhysique\nChimie"]
+        },
+        {
+            "tags":"FSTFiliere",
+            "questions":["Les filières de la FST?", "Quelles sont les filières de la fst?", "Quelles sont les filières?"],
+            "responses":["Nos filières sont :\nLe Génie logiciel, les réseaux et télécoms, la maintenance et réseaux, Energie et environnement..."]
+        },
+        {
+            "tags":"ConditionAdmission",
+            "questions":["Les conditions d'admission à la Fst?", "Quelles sont les conditions d'admission de la fst?"],
+            "responses":["Agé de 25 ans ou plus, inscription directe."]
+        },
+        {
+            "tags":"CommentInscrire",
+            "questions":["Comment s'inscrire à la fst??", "L'inscription à la fst", "Inscription"],
+            "responses":["Pour s'inscrire ici, il faut télécharger notre application FST-Mobile après dans celle-ci faire la préinscription en donnant les informations nécessaires.\nAprès vous serez informés de la suite."]
+        },
+        {
+            "tags":"PasserEnClasseSuperieur",
+            "questions":["Combien d'UE pour passer en classe Supérieure?", "Comment passer en classe supérieure?"],
+            "responses":["Il faut valider au moins 8 UE."]
+        },
+        {
+            "tags":"Blague",
+            "questions":["raconte moi une blague ","tu sais blaguer","une blague svp","fais moi rire","Tu sais faire rire","dis moi un truc drole"],
+            "responses":["Tu savais que, Chuck Norris peut encercler ses ennemis. Tout seul","Tu savais que, Quand Chuck Norris pisse face au vent, le vent change de direction","Tu savais que, Chuck Norris peut t'étrangler avec un téléphone sans fil.","Tu savais que, Quand Chuck Norris utilise Windows, il ne plante pas.","Tu savais que, Chuck Norris peut te faire passer un sale quart d'heure en 8 minutes.","Tu savais que, Chuck Norris est capable de laisser un message avant le bip sonore.","Tu savais que,  Chuck Norris peut claquer une porte fermée...","Tu savais que, Quand Bruce Banner est énervé il devient Hulk...quand Hulk est énervé il devient Chuck Norris.","Tu savais que, Une larme de Chuck Norris peut guérir du cancer, malheureusement Chuck Norris ne pleure pas.","Tu savais que, ","Tu savais que, ","Tu savais que, Si Luke a pleuré quand Dark Vador lui a dit qu'il était son père, c'est parce qu'il esperait être le fils de Chuck Norris. ","Tu savais que,  Chuck Norris peut applaudir d'une seule main. Chuck Norris est en couleur sur les photos Noir et Blanc Chuck Norris mesure très précisément 1 Chuck Norris.","Tu savais que,  Chuck Norris a fini Super Mario Bros sans sauter.","Tu savais que, Chuck Norris ne dort pas. Il attend.","Tu savais que,  Si Chuck Norris se prend une balle, c'est la balle qui meurt.","Tu savais que, C'est lorsque Mickael Jackson a croisé Chuck Norris qu'il est devenu blanc.","Tu savais que, Maitre Yoda a perdu la vie le jour où il a appelé Chuck Norris 'Norris Chuck'.","Tu savais que, Chuck Norris a inventé l'écriture pour faire comprendre a un sourd qu'il allait lui péter la gueule.","Tu savais que, J.C.Van Damme casse des noix entre ses fesses. Chuck Norris Casse J.C.Van Damme de le même façon.","Tu savais que,  Un film de Bruce Lee montre Chuck Norris se faire battre par Bruce Lee. C'est là l'effet spécial le plus cher de toute l'histoire du cinéma.","Tu savais que, Les amnésiques se souviennent quand même de Chuck Norris. ","Tu savais que, Si Chuck Norris dort avec une lampe allumée, ce n'est pas parce qu'il a peur du noir mais parce que le noir a peur de lui.","Tu savais que, Jésus a dit 'lève-toi et marche' à Chuck Norris. Depuis, on a plus de nouvelles de Jésus."]
+        }
+    ]
+}

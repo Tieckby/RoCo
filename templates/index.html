@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link href="{{ url_for('static', filename='styles/bootstrap4.4.1/dist/css/bootstrap.min.css') }}" rel="stylesheet">
+		<script src="{{ url_for('static', filename='styles/bootstrap4.4.1/dist/js/bootstrap.min.js') }}"></script>
+		<link type="text/css" rel="stylesheet" charset="UTF-8" href="{{ url_for('static', filename='styles/bootstrap4.4.1/dist/style.css') }}">
+		<title>Chatbot RoCo</title>
+	</head>
+
+	<body class="text-center">
+		<nav class="navbar navbar-expand-sm navbar-dark bg-dark mb-4">
+			<button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<h4><span class="navbar-text">Chatbot RoCo</span></h4>
+			<div class="collapse navbar-collapse" id="collapse_target">
+				<ul class="navbar-nav">
+					<li class="nav-item"><a class="nav-link" href="{{url_for('home')}}">Accueil</a></li>
+					<li class="nav-item"><a class="nav-link" href="{{url_for('login')}}">Se connecter</a></li>
+				</ul>
+			</div>
+		</nav>
+		<div class="main-content">
+			<h3>Essayer notre Chatbot...</h3>
+			<p>Notre Chatbot permet de vous répondre sur certaines questions liées à la Faculté des Sciences et Techniques (FST).<br>Exemple : A combien d'UE, on passe de la  L1 à L2... et beaucoup d'autre ! Si la conversation dévie du cadre prédéfini, le programme ne comprendra pas les directives qui lui sont demandées.</p>
+			<p><a href="{{url_for('chat')}}" class="btn btn-lg btn-secondary">Poser votre question</a></p>
+		</div>
+		<footer class="container-fluid" style="margin-top:10px; color: #fff; background: #808080; position: absolute; bottom: 0;">
+			<section class="row">
+				<div class="col-sm-6 col-lg-3 p-4">
+					<span style="margin: 10px;"><a href="#" style="color:#2758df"><i class="fab fa-twitter"></i></a></span>
+					<span style="margin: 10px;"><a href="#" style="color:#fff"><i class="fab fa-github"></i></a></span>
+					<span style="margin: 10px;"><a href="#" style="color:#2758df"><i class="fab fa-facebook-f"></i></a></span>
+				</div>
+			</section>
+			<div class="text-center">RoCo &copy; 2020 | Design by Mato_Tiémoko  Copyright tous droits réservés</div>
+		</footer>
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	</body>
+</html>

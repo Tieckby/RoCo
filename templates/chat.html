@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>RoCo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/bootstrap4.4.1/dist/css/bootstrap.min.css') }}" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+        <script src="{{ url_for('static', filename='styles/jquery-3.3.1.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='styles/bootstrap4.4.1/dist/js/bootstrap.min.js') }}"></script>
+</head>
+
+<body>
+    
+
+  <section class="msger">
+    <header class="msger-header">
+        <div class="msger-header-title">
+        <i class="fas fa-robot"></i> FST RoCo <i class="fas fa-robot"></i>
+        </div>
+    </header>
+
+    <main class="msger-chat">
+        <div class="msg left-msg">
+            <div class="msg-img" style="background-image: url(https://image.flaticon.com/icons/svg/1587/1587565.svg)"></div>
+
+            <div class="msg-bubble">
+                <div class="msg-info">
+                    <div class="msg-info-name">RoCo</div>
+                    <div class="msg-info-time">
+                        <script>
+                            var mDate = new Date(); 
+                            var mHours = mDate.getHours();
+                            var mMinutes = mDate.getMinutes();
+                            var mTime = mHours + ":" + mMinutes
+                            document.write(mTime);
+                        </script>
+                    </div>
+                </div>
+
+                <div class="msg-text">
+                    Salut, bienvenu à vous, je suis là pour vous aider. Poser moi toute question concernant la fst !
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <form class="msger-inputarea" method="POST">
+        <input type="text" class="msger-input" id="textInput" name="msg" placeholder="Entrer votre message...">
+        <button type="submit" class="btn btn-secondary">Envoyer</button>
+    </form>
+  </section>
+
+  <script src='https://use.fontawesome.com/releases/v5.0.13/js/all.js'></script>
+  <script>
+    const msgerForm = get(".msger-inputarea");
+    const msgerInput = get(".msger-input");
+    const msgerChat = get(".msger-chat");
+
+    const BOT_IMG = "https://image.flaticon.com/icons/svg/1587/1587565.svg";
+    const PERSON_IMG = "https://image.flaticon.com/icons/svg/1077/1077114.svg";
+    const BOT_NAME = "RoCo";
+    const PERSON_NAME = "Moi";
+
+    msgerForm.addEventListener("submit", event => {
+        event.preventDefault();
+
+        const msgText = msgerInput.value;
+        if (!msgText) return;
+
+        appendMessage(PERSON_NAME, PERSON_IMG, "right", msgText);
+        msgerInput.value = "";
+        botResponse(msgText);
+    });
+
+    function appendMessage(name, img, side, text) {
+
+        const msgHTML = `
+        <div class="msg ${side}-msg">
+        <div class="msg-img" style="background-image: url(${img})"></div>
+        <div class="msg-bubble">
+        <div class="msg-info">
+        <div class="msg-info-name">${name}</div>
+        <div class="msg-info-time">${formatDate(new Date())}</div>
+        </div>
+        <div class="msg-text">${text}</div>
+        </div>
+        </div>
+        `;
+
+        msgerChat.insertAdjacentHTML("beforeend", msgHTML);
+        msgerChat.scrollTop += 500;
+    }
+
+    function botResponse(rawText) {
+
+        $.get("/run", { msg: rawText }).done(function (data) {
+        console.log(rawText);
+        console.log(data);
+        const msgText = data;
+        appendMessage(BOT_NAME, BOT_IMG, "left", msgText);
+
+        });
+
+    }
+
+    function get(selector, root = document) {
+      return root.querySelector(selector);
+    }
+
+    function formatDate(date) {
+      const h = "0" + date.getHours();
+      const m = "0" + date.getMinutes();
+
+      return `${h.slice(-2)}:${m.slice(-2)}`;
+    }
+  </script>
+
+</body>
+</html>
