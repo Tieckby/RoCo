@@ -5,8 +5,14 @@ from datetime import timedelta
 #JSON for json file processing
 import json
 
-# import pyttsx3 as pts
+from termcolor import colored
+from art import  *
 
+print(colored(text2art("ROCO"), color='cyan'))
+print(colored(text2art("RObot"), color='cyan'))
+print(colored(text2art("COnversationnel"), color='cyan'))
+
+# import pyttsx3 as pts
 # speak = pts.init()
 # #set index to 0 for french and 1 for english
 # voices = speak.getProperty('voices')
